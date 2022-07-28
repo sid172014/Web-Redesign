@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #6E85B7;
+    padding-bottom: 100px;
+}
+#heading .row{
+    padding-top: 30px;
+}
+
+#heading h1{
+    font-size: 10vh;
+    font-family: "encanto";
+    text-align: center;
+    color: white;
+    font-weight: 600;
+}
+
+#circle1{
+    font-size: 10px;
+    text-align: left;
+}
+
+#circle2{
+    text-align: right;
+    position: relative;
+}
+
+#circle1 img, #circle2 img{
+    border-radius: 95%;
+    transform: rotate(-765deg);
+    transition: 2s ease-in-out;
+}
+#circle2 img{
+    position:absolute;
+    right: 30px;
+    transform: rotate(855deg);
+    transition: 2s ease-in-out ;
+}
+body{
+    background-image: linear-gradient(to right,#6E85B7,#6E85B7);
+}
+
+#heading h1
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #F8F9D7 0%,
+    #C4D7E0 29%,
+    #fff 67%,
+    #6E85B7 100%
+  );
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 4s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
+/* ----------- Main Section ------------*/
+.main .row {
+    height: 80vh;
+
+}
+.row .col-lg-6:nth-child(1){
+    display: flex;
+    justify-content: center;
+}
+.row .col-lg-6:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+.photoContainer{
+    background-image: linear-gradient(to bottom,#F8F9D7,#C4D7E0);
+    width: 40%;
+    height: 60%;
+    border-radius: 30px;
+    border-left: solid  #f1c253 6px;
+    border-bottom: solid #f1c253 6px;
+    z-index: -100;
+}
+.waves{
+    position: absolute;
+    bottom: 0px;
+}
+
+/* Importing Fonts */
+@font-face {
+    font-family: "encanto";
+    src: url(fonts/encanto.ttf);
+}
