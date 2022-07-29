@@ -86,7 +86,7 @@ body{
 
 /* ----------- Main Section ------------*/
 .main .row {
-    height: 80vh;
+    min-height: 80vh;
 
 }
 .row .col-lg-6:nth-child(1){
@@ -97,6 +97,12 @@ body{
     display: flex;
     justify-content: center;
 }
+.waves{
+    position: absolute;
+    bottom: 0px;
+}
+
+/* -- The Card Section */
 .photoContainer{
     background-image: linear-gradient(to bottom,#F8F9D7,#C4D7E0);
     width: 40%;
@@ -105,23 +111,20 @@ body{
     border-left: solid  #f1c253 6px;
     border-bottom: solid #f1c253 6px;
     z-index: -100;
-}
-.waves{
-    position: absolute;
-    bottom: 0px;
+    position: relative;
 }
 
+
+/*--*/
 
 /* ------------ Media Queries -------------- */
 @media (max-width: 900px) {
     #image1{
         display: none;
     }
-    .row .col-lg-6:nth-child(1){
-        display: flex;
-        justify-content: center;
-        height: 30rem;
-        
+    .photoContainer{
+        height: 20rem;
+        width: 15rem;
     }
 }
 
