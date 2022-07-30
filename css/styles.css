@@ -96,16 +96,18 @@ body{
 .row .col-lg-6:nth-child(2){
     display: flex;
     justify-content: center;
+    position: relative;
 }
 .waves{
     position: absolute;
     bottom: 0px;
 }
 
-/* -- The Card Section */
 .photoContainer{
-    background-image: linear-gradient(to bottom,#F8F9D7,#C4D7E0);
+    background-image: url("../images/guru-prasad-own.jpeg");
+    background-size: cover;
     width: 40%;
+    
     height: 60%;
     border-radius: 30px;
     border-left: solid  #f1c253 6px;
@@ -114,6 +116,35 @@ body{
     position: relative;
 }
 
+.text{
+    color: #F8F9D7;
+    font-weight: 600;
+    background-image: linear-gradient(to top,#F8F9D7,#6E85B7);
+    padding: 15px 15px 15px 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:2rem;
+    width: 80%;
+    height: 60%;
+    border-radius: 30px;
+    position: absolute;
+    left: -50px;
+    overflow: scroll;
+
+    border-left: solid  #f1c253 6px;
+    border-bottom: solid #f1c253 6px;
+    border-top: solid #f1c253 6px;
+    border-right:solid #f1c253 6px;
+    text-align: cen
+}
+p{
+    padding-top: 10px;
+    color: black;
+    font-family: "'hallo_sans', Helvetica, Arial, sans-serif";
+    font-weight: 100;
+    font-size: large;
+    text-align: justify;
+    text-justify: inter-word;
+}
 
 /*--*/
 
@@ -126,6 +157,17 @@ body{
         height: 20rem;
         width: 15rem;
     }
+    .text{
+        position: absolute;
+        left: auto;
+        right: auto;
+        margin-top: 4rem;
+        height: 35rem;
+    }
+    #secondcol{
+        height:50rem;
+    }
+    
 }
 
 
@@ -134,4 +176,8 @@ body{
 @font-face {
     font-family: "encanto";
     src: url(fonts/encanto.ttf);
+}
+@font-face {
+    font-family: "'hallo_sans', Helvetica, Arial, sans-serif";
+    src: url(fonts/hallo_sans_light-webfont.woff2);
 }
