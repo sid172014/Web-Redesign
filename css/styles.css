@@ -143,13 +143,13 @@ body{
     transform: rotateY(180deg);
     display: none;
 }
-.text:active{
+.text:hover{
      transform: rotateY(180deg);
 }
-.text:active .front{
+.text:hover .front{
     display: none;
 }
-.text:active .back{
+.text:hover .back{
     display: block ;
 }
 .line{
