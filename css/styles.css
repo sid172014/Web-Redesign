@@ -63,7 +63,7 @@ body{
   background-image: linear-gradient(
     -225deg,
     #F8F9D7 0%,
-    #C4D7E0 29%,
+    #fff 29%,
     #fff 67%,
     #6E85B7 100%
   );
@@ -120,7 +120,7 @@ body{
     color: #F8F9D7;
     font-weight: 600;
     background-image: linear-gradient(to top,#F8F9D7,#6E85B7);
-    padding: 15px 15px 15px 15px;
+    padding:30px 30px 30px 30px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size:2rem;
     width: 80%;
@@ -134,7 +134,39 @@ body{
     border-bottom: solid #f1c253 6px;
     border-top: solid #f1c253 6px;
     border-right:solid #f1c253 6px;
-    text-align: cen
+    text-align: center;
+    transition: 0.2s ease;
+    transform-style: preserve-3d;
+}
+.back{
+    color: black;
+    transform: rotateY(180deg);
+    display: none;
+}
+.text:active{
+     transform: rotateY(180deg);
+}
+.text:active .front{
+    display: none;
+}
+.text:active .back{
+    display: block ;
+}
+.line{
+    position: absolute;
+    top: 20%;
+    height: 2px;
+    width:37%;
+    background-color: white;
+    animation: animate 2s ease-in-out forwards;
+}
+@keyframes animate {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
 }
 p{
     padding-top: 10px;
@@ -163,11 +195,18 @@ p{
         right: auto;
         margin-top: 4rem;
         height: 35rem;
+        text-align: center;
     }
     #secondcol{
         height:50rem;
     }
-    
+    .front{
+        font-size:1.3rem;
+    }
+    .line{
+        top: 11%;
+        width: 36%;
+    }
 }
 
 
