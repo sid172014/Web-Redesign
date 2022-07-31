@@ -137,6 +137,10 @@ body{
     text-align: center;
     transition: 0.2s ease;
     transform-style: preserve-3d;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 .front div{
     text-align: center;
