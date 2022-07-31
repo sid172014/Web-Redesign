@@ -138,20 +138,59 @@ body{
     transition: 0.2s ease;
     transform-style: preserve-3d;
 }
+.front div{
+    text-align: center;
+    font-size: 20px;
+    color: #6E85B7;
+    
+}
 .back{
     color: black;
     transform: rotateY(180deg);
     display: none;
 }
-.text:hover{
+.back>div{
+    color: #F8F9D7;
+}
+
+#underline{
+    background-color: #F8F9D7;
+    height: 6px;
+    width: 0%;
+}
+
+
+.text:active{
      transform: rotateY(180deg);
 }
-.text:hover .front{
+.text:active .front{
     display: none;
 }
-.text:hover .back{
+.text:active .back{
     display: block ;
 }
+.text:active #underline{
+    animation: animate2 2s ease-in-out forwards;
+}
+@keyframes animate2 {
+    100%{
+        width: 100%;
+    }
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+    }
+    ::-webkit-scrollbar {
+    width: 0px; /* remove scrollbar space /
+    background: transparent; / optional: just make scrollbar invisible /
+    
+    / optional: show position indicator in red */
+    }
+    ::-webkit-scrollbar-thumb {
+    background: #FF0000;
+    }
+
 .line{
     position: absolute;
     top: 20%;
@@ -177,7 +216,30 @@ p{
     text-align: justify;
     text-justify: inter-word;
 }
-
+#pos1{
+    position: absolute;
+    left:23%;
+    top: -5%;
+}
+#pos1 img{
+    transform: rotate(-45deg);
+}
+#pos2{
+    position: absolute;
+    bottom: 34%;
+    right: 25%;
+}
+#pos2 img{
+    transform: rotate(135deg);
+}
+#firstCol:hover #pos2 img{
+    transform: rotate(855deg);
+    transition: 2s ease-in;
+}
+#firstCol:hover #pos1 img{
+    transform: rotate(-765deg);
+    transition: 2s ease-in;
+}
 /*--*/
 
 /* ------------ Media Queries -------------- */
@@ -206,6 +268,14 @@ p{
     .line{
         top: 11%;
         width: 36%;
+    }
+    #pos1{
+        left: 9%;
+        top: -10%;
+    }
+    #pos2{
+        bottom: -8%;
+        right: 10%
     }
 }
 
