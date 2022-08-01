@@ -222,7 +222,7 @@ html {
     position: absolute;
     top: 20%;
     height: 6px;
-    width:37%;
+    width:36%;
     background-color: white;
     animation: animate 2s ease-in-out forwards;
 }
