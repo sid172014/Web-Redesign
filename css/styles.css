@@ -126,7 +126,7 @@
 @media (max-width : 900px) {
     .leftside{
         width: 100%;
-        min-height: 58vh;
+        min-height: 70vh;
     }
     .leftside #picture{
         left: 22%;
