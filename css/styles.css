@@ -3,325 +3,172 @@
     padding: 0;
     box-sizing: border-box;
 }
-#heading{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: white;
+.row{
+    padding-top: 100px;
     padding-bottom: 100px;
+    min-height: 100vh;
 }
-#heading .row{
-    padding-top: 30px;
+.row>div:nth-child(1){
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+}
+.row>div:nth-child(2){
+    height: 80vh;
+}
+.leftside{
+    background-color: #6E85B7;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 65%;
+    position: relative;
+    box-shadow: 10px 10px 10px;
 }
 
-#heading .row:hover #circle1 img{
-    transform: rotate(675deg);
-    transition: 2s ease-in-out ;
+.leftside #picture{
+    width:213px;
+    height: 213px;
+    border-radius: 50%;
+    position: absolute;
+    top: -20%;
+    left: 20%;
+    border: solid 2px white;
 }
-
-#heading .row:hover #circle2 img{
-    transform: rotate(-585deg);
-    transition: 2s ease-in-out ;
-}
-
-#heading h1{
-    font-size: 10vh;
-    font-family: "encanto";
-    text-align: center;
+.leftside h2{
     color: white;
+    padding-top: 40%;
+    font-family: "Sarabun";
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.leftside p{
+    color: white;
+    font-family: "Roboto",sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    word-wrap:break-word;
+    text-justify: inter-word;
+    margin-left: 10%;
+    margin-right: 10%;
     font-weight: 600;
+    padding-top: 5%;
+}
+.icons{
+    text-align: center;
+    padding-top: 15%;
+    word-spacing: 10px;
+}
+.icons img{
+    width: 10%;
+    height: 20%;
 }
 
-#circle1{
-    font-size: 10px;
-    text-align: left;
-}
 
-#circle2{
-    text-align: right;
+/*------- RightSide -----------*/
+
+.rightside{
+    background-color: white;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 90%;
+    height: 85%;
     position: relative;
+    transform: translateX(150%);
 }
-
-#circle1 img, #circle2 img{
-    border-radius: 95%;
-    transform: rotate(-765deg);
-}
-#circle2 img{
-    position:absolute;
-    right: 30px;
-    transform: rotate(855deg);
-}
-
-body{
-    background-image: linear-gradient(to right,white,white);
-}
-
-#heading h1
-{
-   text-transform: uppercase;
-  background-image: linear-gradient(
-    -225deg,
-    #6E85B7 0%,
-    #C4D7E0 29%,
-    #C4D7E0 67%,
-    #6E85B7 100%
-  );
-  background-clip: border-box;
-  background-size: 200% auto;
-  color: #fff;
-  background-clip: text;
-  text-fill-color: transparent;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: textclip 4s linear infinite;
-}
-
-@keyframes textclip {
-  to {
-    background-position: 200% center;
-  }
-}
-
-
-/* ----------- Main Section ------------*/
-.main .row {
-    min-height: 80vh;
-
-}
-.row .col-lg-6:nth-child(1){
-    display: flex;
-    justify-content: center;
-}
-.row .col-lg-6:nth-child(2){
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.waves{
-    position: absolute;
-    bottom: 0px;
-}
-
-.photoContainer{
-    background-image: url("../images/guru-prasad-own.jpeg");
-    background-size: cover;
-    width: 40%;
+.rightside h2{
+    padding-top: 15%;
+    font-family: "Sarabun";
+    letter-spacing: 1px;
+    font-size: 3.5rem;
+    line-height: 1px;
+    padding-bottom: 10%;
+    text-justify: inter-word;
     
-    height: 60%;
-    border-radius: 30px;
-    border-left: solid  #f1c253 6px;
-    border-bottom: solid #f1c253 6px;
-    z-index: -100;
-    position: relative;
 }
-
-.text{
-    color: #F8F9D7;
-    font-weight: 600;
-    background-image: linear-gradient(to top,#F8F9D7,#6E85B7);
-    padding:30px 30px 30px 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size:2rem;
+.rightside p{
+    font-family: "Roboto",sans-serif;
+    font-size: medium;
+}
+.telephone{
     width: 100%;
-    height: 60%;
-    border-radius: 30px;
-    position: absolute;
-    left: -10%;
-    overflow: scroll;
-    position: absolute;
-    right: -50px;
-    text-align: center;
-    transition: 0.2s ease;
-    transform-style: preserve-3d;
+    position: relative;
+    margin-top: 10%;
+}
 
-    -webkit-user-select: none; /* Safari */
-    -ms-user-select: none; /* IE 10 and IE 11 */
-    user-select: none; /* Standard syntax */
-}
-.front div{
-    text-align: center;
-    font-size: 20px;
-    color: #6E85B7;
-    
-}
-.back{
+.rightside a{
+    letter-spacing: 1px;
     color: black;
-    transform: rotateY(180deg);
-    display: none;
+    font-weight: bold;
+    font-size: large;
+    padding: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: solid 3px #6E85B7;
+    border-radius: 60px;
 }
-.back>div{
-    color: #F8F9D7;
-}
-#mouse{
-    position: absolute;
-    bottom: 42%;
-    right: 60%;
-    background-color: #F8F9D7;
-    height: 25px;
-    width: 20px;
-    border-radius: 50px;
-    border: solid 1px black;
-    background: transparent;
-}
-#mouse>div{
-    height: 5px;
-    width: 2px;
-    position: absolute;
-    left: 8px;
-    top: 2px;
-    border-radius: 80px;
+.rightside a:hover{
+    color: white;
     background-color: black;
-    
-    animation: animateMouse 1s ease-in-out infinite;
-}
-@keyframes animateMouse {
-    100%{
-        top: 5px;
-    }
+    border: none;
+    text-decoration: none;
 }
 
-#underline{
-    background-color: #F8F9D7;
-    height: 6px;
-    width: 0%;
-}
-
-.text:active{
-     transform: rotateY(180deg);
-}
-.text:active .front{
-    display: none;
-}
-.text:active .back{
-    display: block ;
-}
-.text:active #underline{
-    animation: animate2 2s ease-in-out forwards;
+.rightside{
+    animation: animate2 1s ease forwards;
 }
 @keyframes animate2 {
     100%{
-        width: 90%;
-    }
-}
-html {
-    overflow: scroll;
-    overflow-x: hidden;
-    }
-    ::-webkit-scrollbar {
-    width: 0px; /* remove scrollbar space /
-    background: transparent; / optional: just make scrollbar invisible /
-    
-    / optional: show position indicator in red */
-    }
-    ::-webkit-scrollbar-thumb {
-    background: #FF0000;
-    }
-
-.line{
-    position: absolute;
-    top: 20%;
-    height: 6px;
-    width:36%;
-    background-color: white;
-    animation: animate 2s ease-in-out forwards;
-}
-@keyframes animate {
-    0%{
         transform: translateX(0%);
     }
-    100%{
-        transform: translateX(100%);
+}
+/*--- Media Queries ------*/
+@media (max-width : 900px) {
+    .leftside{
+        width: 100%;
     }
-}
-p{
-    padding-top: 10px;
-    color: black;
-    font-family: "'hallo_sans', Helvetica, Arial, sans-serif";
-    font-weight: 100;
-    font-size: large;
-    text-align: justify;
-    text-justify: inter-word;
-}
-#pos1{
-    position: absolute;
-    left:23%;
-    top: -5%;
-}
-
-#pos1 img{
-    transform: rotate(-45deg);
-}
-#pos2{
-    position: absolute;
-    bottom: 34%;
-    right: 25%;
-}
-#pos2 img{
-    transform: rotate(135deg);
-}
-#firstCol:hover #pos2 img{
-    transform: rotate(855deg);
-    transition: 2s ease-in;
-}
-#firstCol:hover #pos1 img{
-    transform: rotate(-765deg);
-    transition: 2s ease-in;
-}
-/*--*/
-
-/* ------------ Media Queries -------------- */
-@media (max-width: 900px) {
-    #image1{
-        display: none;
+    .leftside #picture{
+        left: 22%;
     }
-    #mouse{
-        display: none;
+    .row>div:nth-child(1){
+        padding: 0;
+        height: 60vh;
     }
-    .photoContainer{
-        height: 20rem;
-        width: 15rem;
+    .icons{
+        padding-top: 5%;
     }
-    .text{
-        position: absolute;
-        left: auto;
-        right: auto;
-        margin-top: 4rem;
-        height: 35rem;
+    .rightside{
+        margin-left: 5%;
+    }
+    .rightside h2{
         text-align: center;
     }
-    #secondcol{
-        height:50rem;
+    .rightside p{
+        text-align: center;
+        padding-top: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
-    .front{
-        font-size:1.3rem;
-    }
-    .line{
-        top: 11%;
-        width: 36%;
-    }
-    #pos1{
-        left: 9%;
-        top: -10%;
-    }
-    #pos2{
-        bottom: -8%;
-        right: 10%
-    }
-    .row div:nth-child(2){
-        margin-left: 10%;
-        margin-right: 10%;
+    .telephone{
+        padding-top: 10%;
+        text-align: center;
     }
 }
-
-
 
 /* Importing Fonts */
 @font-face {
     font-family: "encanto";
-    src: url(fonts/encanto.ttf);
+    src: url(../fonts/encanto.ttf);
 }
 @font-face {
     font-family: "'hallo_sans', Helvetica, Arial, sans-serif";
-    src: url(fonts/hallo_sans_light-webfont.woff2);
+    src: url(../fonts/hallo_sans_light-webfont.woff2);
+}
+@font-face {
+    font-family: "Sarabun";
+    src: url(../fonts/Sarabun-Bold.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Light.ttf);
 }
